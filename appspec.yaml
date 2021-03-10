@@ -5,6 +5,6 @@ Resources:
       Properties:
         TaskDefinition: "arn:aws:ecs:eu-west-1:641392857770:task-definition/signalr-simple-example:2"
         LoadBalancerInfo:
-          ContainerName: "signalr-aws-service-container"
+          ContainerName: "signalr-simple-example-container"
           ContainerPort: "80"
         PlatformVersion: "LATEST"
