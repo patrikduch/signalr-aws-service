@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:eu-west-1:641392857770:task-definition/signalr-simple-example:2"
+        TaskDefinition: "arn:aws:ecs:eu-west-1:641392857770:task-definition/signalr-simple-example-task-definition:1"
         LoadBalancerInfo:
           ContainerName: "signalr-simple-example-container"
           ContainerPort: "80"
