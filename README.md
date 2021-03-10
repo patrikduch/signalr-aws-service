@@ -5,10 +5,10 @@
 
 ### Build image
 
-docker build -f Dockerfile -t netcore-dockerization .
+docker build -f Dockerfile -t signalr-dockerization .
 
 
 ### Run image
 
-docker run -p 8080:8080 netcore-dockerization 
+docker run -p 80:80 signalr-dockerization 
 

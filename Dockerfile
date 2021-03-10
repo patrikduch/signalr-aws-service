@@ -8,14 +8,14 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY *.csproj ./
-RUN dotnet restore "NetCore-Dockerization.csproj"
+RUN dotnet restore "SignalR-Aws-Service.csproj"
 COPY . .
-RUN dotnet build "NetCore-Dockerization.csproj" -c Release -o /app/build
+RUN dotnet build "SignalR-Aws-Service.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "NetCore-Dockerization.csproj" -c Release -o /app/publish
+RUN dotnet publish "SignalR-Aws-Service.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "NetCore-Dockerization.dll"]
+ENTRYPOINT ["dotnet", "SignalR-Aws-Service.dll"]
