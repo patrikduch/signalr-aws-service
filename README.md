@@ -2,11 +2,9 @@
 
 ## Dockerization
 
-
 ### Build image
 
 docker build -f Dockerfile -t signalr-dockerization .
-
 
 ### Run image
 
