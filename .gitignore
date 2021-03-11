@@ -1,7 +1,1 @@
-/bin
-/obj
 /.vs/
-
-/RabbitMQBroker/bin
-/RabbitMQBroker/obj
-/RabbitMQBroker/.vs/
