@@ -23,7 +23,10 @@ namespace NetCore_Dockerization
             {
                 options.AddPolicy("CorsPolicy", builder =>
                     builder
-                    .WithOrigins("http://localhost")
+                    .WithOrigins(
+                        "http://localhost", 
+                        "http://aspnetcorereactreduxtemplate-env.eba-mcv635ym.eu-west-1.elasticbeanstalk.com/"
+                    )
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials()
