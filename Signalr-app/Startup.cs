@@ -25,7 +25,7 @@ namespace NetCore_Dockerization
                     builder
                     .WithOrigins(
                         "http://localhost", 
-                        "http://aspnetcorereactreduxtemplate-env.eba-mcv635ym.eu-west-1.elasticbeanstalk.com/"
+                        "http://aspnetcorereactreduxtemplate-env.eba-mcv635ym.eu-west-1.elasticbeanstalk.com"
                     )
                     .AllowAnyMethod()
                     .AllowAnyHeader()
