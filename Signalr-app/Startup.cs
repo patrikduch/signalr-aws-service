@@ -37,6 +37,11 @@ namespace NetCore_Dockerization
 
             //app.UseAuthorization();
 
+            // Make sure you call this before calling app.UseMvc()
+            app.UseCors(
+                options => options.WithOrigins("http://localhost:80").AllowAnyMethod()
+            );
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
