@@ -23,7 +23,7 @@ namespace NetCore_Dockerization
             {
                 options.AddPolicy("CorsPolicy", builder =>
                     builder
-                    .WithOrigins("http://localhost:80")
+                    .WithOrigins("http://localhost")
                     .AllowAnyMethod()
                     .AllowAnyHeader());
             });
