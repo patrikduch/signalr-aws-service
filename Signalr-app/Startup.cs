@@ -25,7 +25,9 @@ namespace NetCore_Dockerization
                     builder
                     .WithOrigins("http://localhost")
                     .AllowAnyMethod()
-                    .AllowAnyHeader());
+                    .AllowAnyHeader()
+                    .AllowCredentials()
+                    );
             });
             services.AddControllers();
             services.AddSignalR();
