@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using NetCore_Dockerization.Hubs;
+using SignalRAwsService.Contexts;
+using SignalRAwsService.Hubs;
 
-namespace NetCore_Dockerization
+namespace SignalRAwsService
 {
     public class Startup
     {
@@ -34,6 +36,12 @@ namespace NetCore_Dockerization
             });
             services.AddControllers();
             services.AddSignalR();
+
+            #region EFCore
+            services.AddDbContext<ProjectDetailContext>(options =>  options.UseNpgsql
+                (Configuration.GetConnectionString("DefaultConnection"))
+            );
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

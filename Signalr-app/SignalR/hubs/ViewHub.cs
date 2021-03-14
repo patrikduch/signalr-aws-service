@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.SignalR;
-using NetCore_Dockerization.SignalR.handlers;
+using SignalRAwsService.SignalR.handlers;
 using System;
 using System.Threading.Tasks;
 
-namespace NetCore_Dockerization.Hubs
+namespace SignalRAwsService.Hubs
 {
     public class ViewHub : Hub
     {

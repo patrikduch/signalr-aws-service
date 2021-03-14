@@ -1,23 +1,31 @@
 ﻿// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-namespace NetCore_Dockerization.Controllers
+namespace SignalRAwsService.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
-    using NetCore_Dockerization.Models;
+    using Microsoft.EntityFrameworkCore;
+    using SignalRAwsService.Contexts;
+    using SignalRAwsService.Models;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     [Route("")]
     [ApiController]
     public class ProjectDetailController : ControllerBase
     {
+
+        private readonly ProjectDetailContext _projectDetailContext;
+
+        public ProjectDetailController(ProjectDetailContext projectDetailContext)
+        {
+            _projectDetailContext = projectDetailContext;
+        }
+
+
         // GET: api/project
         [HttpGet]
-        public ProjectDetail GetProjectDetail()
+        public async Task<ProjectDetail> GetProjectDetail()
         {
-            return new ProjectDetail
-            {
-                Id = 1,
-                Name = "SignalR with RabbitMQ broker in .NETCore on AWS cloud platform",
-                Author = "Patrik Duch"
-            };
+            return await _projectDetailContext.ProjectDetail.SingleOrDefaultAsync();
         }
     }
 }

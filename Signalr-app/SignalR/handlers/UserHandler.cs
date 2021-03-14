@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NetCore_Dockerization.SignalR.handlers
+namespace SignalRAwsService.SignalR.handlers
 {
     public static class UserHandler
     {
