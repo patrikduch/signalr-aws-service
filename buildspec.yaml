@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      dotnet: latest
+      dotnet: 3.1
   pre_build:
     commands:
     - echo Logging in to Amazon ECR...
