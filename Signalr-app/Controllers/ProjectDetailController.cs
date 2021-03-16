@@ -14,7 +14,6 @@ namespace SignalRAwsService.Controllers
     [Route("")]
     public class ProjectDetailController : ControllerBase
     {
-
         private readonly ProjectDetailContext _projectDetailContext;
 
         /// <summary>
