@@ -5,6 +5,7 @@
     <RootNamespace>SignalRAwsService</RootNamespace>
     <UserSecretsId>ca459bc8-bf39-4434-950f-657f844458f2</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <RuntimeFrameworkVersion>5.0</RuntimeFrameworkVersion>
   </PropertyGroup>
 
   <ItemGroup>
