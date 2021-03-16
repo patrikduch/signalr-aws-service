@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace SignalRAwsService.Models.ModelsConfiguration
 {
+    /// <summary>
+    /// Mapping and restriction policy for ProjectDetail model.
+    /// </summary>
     public class ProjectDetailConfiguration : IEntityTypeConfiguration<ProjectDetail>
     {
         /// <summary>

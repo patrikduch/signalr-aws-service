@@ -4,6 +4,9 @@ using SignalRAwsService.Models.ModelsConfiguration;
 
 namespace SignalRAwsService.Contexts
 {
+    /// <summary>
+    /// DB context for managing project detail details.
+    /// </summary>
     public class ProjectDetailContext : DbContext
     {
         public ProjectDetailContext(DbContextOptions<ProjectDetailContext> options) : base(options)
@@ -11,6 +14,10 @@ namespace SignalRAwsService.Contexts
 
         }
 
+        /// <summary>
+        /// Configuration setup for ProjectDetail DB context.
+        /// </summary>
+        /// <param name="builder">Modelbuilder instance that is used for additional Model configuration.</param>
         protected override void OnModelCreating(ModelBuilder builder){
 
             // Addd the Postgres Extension for UUID generation
@@ -19,8 +26,6 @@ namespace SignalRAwsService.Contexts
             builder.ApplyConfiguration(new ProjectDetailConfiguration());    
         }
 
-
         public DbSet<ProjectDetail> ProjectDetail { get; set;}
-        
     }
 }

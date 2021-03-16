@@ -8,6 +8,9 @@ namespace SignalRAwsService.Models
     public class ProjectDetail
     {
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ProjectDetail()
         {
             Id = new Guid();

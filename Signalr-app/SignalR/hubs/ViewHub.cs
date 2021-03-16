@@ -21,6 +21,7 @@ namespace SignalRAwsService.Hubs
             return base.OnDisconnectedAsync(exception);
         }
 
+ 
         public async Task NotifyWatching()
         {
             ViewCount = UserHandler.ConnectedIds.Count;

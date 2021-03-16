@@ -6,11 +6,19 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SignalRAwsService.Contexts;
 using SignalRAwsService.Hubs;
+using SignalRAwsService.SignalR.hubs;
 
 namespace SignalRAwsService
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -44,7 +52,11 @@ namespace SignalRAwsService
             #endregion
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="env"></param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -63,6 +75,7 @@ namespace SignalRAwsService
             {
                 endpoints.MapControllers();
                 endpoints.MapHub<ViewHub>("/hubs/view");
+                endpoints.MapHub<ProjectDetailHub>("/hubs/project");
             });
         }
     }
